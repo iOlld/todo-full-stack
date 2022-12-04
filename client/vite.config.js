@@ -17,7 +17,16 @@ export default ({ mode }) => {
 			fs: { strict: false },
 			port: process.env.VITE_PORT,
 		},
-	
+		
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData:
+						'$use-layout-classes: false;@import "/src/../node_modules/wave-ui/src/wave-ui/scss/_variables.scss";',
+				},
+			},
+		},
+
 		plugins,
 	
 		resolve: {

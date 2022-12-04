@@ -56,13 +56,15 @@ mongoose.connect(
 const typeDefs = `
   type Query {
     info: String!
+    test: String!
   }
 `
 
 // 2
 const resolvers = {
   Query: {
-    info: () => `This is iOlld test`
+    info: () => `This is iOlld test`,
+    test: () => 'Test'
   }
 }
 
